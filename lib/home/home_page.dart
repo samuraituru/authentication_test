@@ -1,4 +1,5 @@
 import 'package:authentication_test/home/home_model.dart';
+import 'package:authentication_test/list/list_page.dart';
 import 'package:authentication_test/register/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,17 @@ class HomePage extends StatelessWidget {
               return Center(
                 child: Column(
                   children: [
+                    TextButton(
+                        onPressed: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ListPage(),
+                            ),
+                          );
+                        },
+                        child: Text('next'),
+                    ),
                     FloatingActionButton(onPressed: (){
                       Navigator.push(
                           context,
